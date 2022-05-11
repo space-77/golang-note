@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<style>
+/*<![CDATA[*/
+
+body{
+	width: 1024px;
+	margin: 0;
+	padding: 0;
+	color: white;
+	background-color: black;
+}
+
+h1{
+	font-size: 12pt;
+}
+
+ul{
+	list-style-type: none;
+	margin-left: -24px;
+}
+
+li{
+	line-height: 150%;
+}
+
+#ID_Header{
+	border-bottom: 2px dotted black;
+	margin: 0px 4px 8px 0px;
+	padding: 0px 0px 0px 8px
+}
+
+#ID_Footer{
+	border-top: 2px dotted black;
+	margin: 4px 0px 32px 0px;
+	padding: 8px 0px 0px 8px
+}
+
+#ID_Tree{
+	padding: 0px;
+}
+
+#ID_AppData{
+	display: none;
+}
+
+.CLS_NoJump{
+	color: lavender;
+}
+
+.CLS_Jump{
+	color: white;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.CLS_Jump:hover{
+	color: black;
+	background-color: lightblue;
+	text-decoration: none;
+}
+
+.CLS_Indent1{
+	margin-left: 5px;
+}
+
+.CLS_Indent2{
+	margin-left: 16px;
+}
+
+/*]]>*/
+</style>
+
+<title>Golang</title>
+
+</head>
+
+<body>
+
+<div id='ID_AppLoading'>
+	<script>document.write('Loading...');</script>
+	<noscript>Javascript must be enabled for viewing this webiste.</noscript>
+</div>
+
+<div id='ID_AppData'>
+
+<ul id='ID_DataInfoItems'>
+	<li level="0" sub="10">Golang</li>
+	<li level="1" sub="12">第1章：走进Golang</li>
+	<li level="2" href="2fc10ed2_25c3069e_0.html">Golang引入</li>
+	<li level="2" href="2c800ea4_25560694_0.html">Golang简史</li>
+	<li level="2" href="2fc70ed5_7b660ce2_0.html">开发工具介绍</li>
+	<li level="2" href="2cd20ea5_797f0cd2_0.html">开发环境搭建</li>
+	<li level="2" href="30a60ee1_478c09d7_0.html">DOS命令讲解</li>
+	<li level="2" href="33f60f0e_f73611ec_0.html">测试SDK环境搭建成功</li>
+	<li level="2" href="2f190ecb_1fce19bc_0.html">第一段程序：HelloWorld快速入门</li>
+	<li level="2" href="31170ee2_5bd30aba_0.html">Golang执行流程</li>
+	<li level="2" href="2cbd0eaa_7eaa0d19_0.html">语法注意事项</li>
+	<li level="2" href="2ff90ed8_fdc043c_0.html">注释</li>
+	<li level="2" href="2cc70ea8_395408a7_0.html">代码风格</li>
+	<li level="2" href="34190f10_1af00db_0.html">API</li>
+	<li level="1" sub="4">第2章：变量与数据类型</li>
+	<li level="2" href="23610e8f_ee7040c_0.html">变量</li>
+	<li level="2" sub="2" href="33b70f05_399c08ae_0.html">数据类型</li>
+	<li level="3" sub="10" href="685e1001_7ea90d1a_0.html">基本数据类型</li>
+	<li level="4" href="ab40118c_537b15bc_0.html">扩展：进制和进制转换</li>
+	<li level="4" href="a8f9116c_3a1208bc_0.html">整数类型</li>
+	<li level="4" href="a53e1137_3ae608cd_0.html">浮点类型</li>
+	<li level="4" href="a6601147_3a6708c4_0.html">字符类型</li>
+	<li level="4" href="a5131138_39a808ab_0.html">布尔类型</li>
+	<li level="4" href="a5dd113f_5a320b12_0.html">字符串类型</li>
+	<li level="4" href="a907116d_548c15b6_0.html">基本数据类型的默认值</li>
+	<li level="4" href="9e0e10d1_9b0217e1_0.html">基本数据类型之间的转换</li>
+	<li level="4" href="aaa41183_51bd1458_0.html">基本数据类型转为string</li>
+	<li level="4" href="a928116f_2a8d1458_0.html">string转为基本数据类型</li>
+	<li level="3" sub="2">复杂数据类型</li>
+	<li level="4" href="ae3511a4_ea903fd_0.html">指针</li>
+	<li level="4" href="b0cf11c8_360e0819_0.html">指针细节</li>
+	<li level="2" href="2d790eb0_7b0f0cec_0.html">标识符的使用</li>
+	<li level="2" href="37ef0f44_4b62153a_0.html">关键字和预定义标识符</li>
+	<li level="1" sub="8" href="fab30d88_862a0d86_0.html">第3章：运算符</li>
+	<li level="2" href="2eb20ecf_59080afa_0.html">算术运算符</li>
+	<li level="2" href="2d110eb4_581f0ae6_0.html">赋值运算符</li>
+	<li level="2" href="2ade0e92_59990b0f_0.html">关系运算符</li>
+	<li level="2" href="2e800ec8_58d80af8_0.html">逻辑运算符</li>
+	<li level="2" href="2e460ec6_3a4c08cb_0.html">位运算符</li>
+	<li level="2" href="2d870ebe_58820af2_0.html">其他运算符</li>
+	<li level="2" href="2ebb0ec9_da87112c_0.html">运算符的优先级别</li>
+	<li level="2" href="2d200eb5_d86f1133_0.html">获取用户终端输入</li>
+	<li level="1" sub="3">第4章：流程控制</li>
+	<li level="2" href="2a510e9a_fc20446_0.html">引入</li>
+	<li level="2" sub="2">分支结构</li>
+	<li level="3" sub="3">if分支</li>
+	<li level="4" href="a9ce118f_1f380624_0.html">单分支</li>
+	<li level="4" href="a9f21191_1f09061d_0.html">双分支</li>
+	<li level="4" href="a5541153_20130640_0.html">多分支</li>
+	<li level="3" href="6c93105c_275206af_0.html">switch分支</li>
+	<li level="2" sub="4">循环结构</li>
+	<li level="3" href="65711009_1a7105b9_0.html">for循环</li>
+	<li level="3" href="66051011_f7d041d_0.html">细节</li>
+	<li level="3" href="631a0fe4_11300375_0.html">for range</li>
+	<li level="3" sub="4">关键字</li>
+	<li level="4" href="9ea31112_6130206_0.html">break</li>
+	<li level="4" href="9b3010e0_f3e0366_0.html">continue</li>
+	<li level="4" href="9df51108_44401ba_0.html">goto</li>
+	<li level="4" href="9cd610fe_92c02a1_0.html">return</li>
+	<li level="1" sub="13">第5章：函数</li>
+	<li level="2" href="36130f21_56cb0a9f_0.html">函数的引入</li>
+	<li level="2" href="35ef0f22_96580d57_0.html">函数细节详讲01</li>
+	<li level="2" href="35720f19_96590d58_0.html">函数细节详讲02</li>
+	<li level="2" href="363e0f21_965a0d59_0.html">函数细节详讲03</li>
+	<li level="2" href="39750f51_965b0d5a_0.html">函数细节详讲04</li>
+	<li level="2" href="34ee0f14_36450841_0.html">包的引入</li>
+	<li level="2" href="39d60f56_90940cfe_0.html">包的细节详讲01</li>
+	<li level="2" href="2deb0ead_90950cff_0.html">包的细节详讲02</li>
+	<li level="2" href="35d70f1e_1df70609_0.html">init函数</li>
+	<li level="2" href="37db0f3b_382b0887_0.html">匿名函数</li>
+	<li level="2" href="347a0f0d_f6f0424_0.html">闭包</li>
+	<li level="2" href="34fe0f0f_39060878_0.html">defer关键字</li>
+	<li level="2" sub="3">系统函数</li>
+	<li level="3" sub="2">字符串相关函数</li>
+	<li level="4" href="a5731130_19dc04e7_0.html">详讲01</li>
+	<li level="4" href="a9d9116b_19dd04e8_0.html">详讲02</li>
+	<li level="3" sub="1">日期和时间相关函数</li>
+	<li level="4" href="a2701123_103f0486_0.html">详讲</li>
+	<li level="3" href="6b581029_38060897_0.html">内置函数</li>
+	<li level="1" sub="2">第6章：错误处理</li>
+	<li level="2" href="2fad0ecb_fb1d11ed_0.html">defer+recover机制处理错误</li>
+	<li level="2" href="32760ef3_56f30ac9_0.html">自定义错误</li>
+	<li level="1" sub="7">第7章：数组</li>
+	<li level="2" href="30640ee9_56eb0a9c_0.html">数组的引入</li>
+	<li level="2" href="2ddf0ec2_35f50822_0.html">内存分析</li>
+	<li level="2" href="2e510ecc_55af0a47_0.html">数组的遍历</li>
+	<li level="2" href="2ff70ee3_d4dc10e4_0.html">数组的初始化方式</li>
+	<li level="2" href="2bd50eac_391008a7_0.html">注意事项</li>
+	<li level="2" href="23e10e38_3ad108d2_0.html">二维数组</li>
+	<li level="2" href="28950e7b_a93e0ec7_0.html">二维数组的遍历</li>
+	<li level="1" sub="5">第8章：切片</li>
+	<li level="2" href="35600f19_52090a36_0.html">切片的引入</li>
+	<li level="2" href="37ea0f3e_35f50822_0.html">内存分析</li>
+	<li level="2" href="31d80ee7_52200a44_0.html">切片的定义</li>
+	<li level="2" href="307f0ed1_50cd09e1_0.html">切片的遍历</li>
+	<li level="2" href="3a6e0f61_768a0c92_0.html">切片注意事项</li>
+	<li level="1" sub="3">第9章：映射</li>
+	<li level="2" href="26ab0e62_2dfa0789_0.html">map的引入</li>
+	<li level="2" href="2a790e9e_70f90c54_0.html">map3种创建方式</li>
+	<li level="2" href="27060e6a_2d770787_0.html">map的操作</li>
+	<li level="1" sub="17">第10章：面向对象</li>
+	<li level="2" href="2f6e0ed1_a7a40f00_0.html">面向对象的引入</li>
+	<li level="2" href="30520edb_21480672_0.html">结构体</li>
+	<li level="2" href="2f150ecd_35f50822_0.html">内存分析</li>
+	<li level="2" href="29640e7f_133b1397_0.html">结构体实例创建方式</li>
+	<li level="2" href="29b70e81_d9ba1139_0.html">结构体之间的转换</li>
+	<li level="2" href="2a600e8d_57b40aae_0.html">方法的引入</li>
+	<li level="2" href="278b0e62_a7720f0f_0.html">方法的注意事项</li>
+	<li level="2" href="23510e95_d7e91103_0.html">方法和函数的区别</li>
+	<li level="2" href="2e610ec6_36031c1e_0.html">创建结构体实例时指定字段值</li>
+	<li level="2" href="2e0e0ec2_11fd136f_0.html">跨包创建结构体实例</li>
+	<li level="2" href="2eea0eca_f5b0427_0.html">封装</li>
+	<li level="2" href="2e090ec1_58b50ac2_0.html">继承的引入</li>
+	<li level="2" href="31da0ef5_7eda0d1e_0.html">继承注意事项</li>
+	<li level="2" href="2f0f0ed0_55340a7b_0.html">接口的引入</li>
+	<li level="2" href="34840f1a_7a840cd7_0.html">接口注意事项</li>
+	<li level="2" href="32330ef9_f33040b_0.html">多态</li>
+	<li level="2" href="32a60f00_f94043a_0.html">断言</li>
+</ul>
+
+</div>
+
+<div id='ID_AppSafeFrame' style='display: none;'>
+
+	<div id='ID_Header'>
+	</div>
+
+	<div id='ID_Workspace'>
+		<div id='ID_Tree'>
+		</div>
+	</div>
+
+	<div id='ID_Footer'>
+	</div>
+
+</div>
+
+</body>
+
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+
+<script>
+//<![CDATA[
+
+var _trim=function(s){return (s||'').replace(/^\s+|\s+$/g, '');};
+var _trim_l=function(s){return (s||'').replace(/^\s+/g, '');};
+var _trim_r=function(s){return (s||'').replace(/\s+$/g, '');};
+
+$(document).ready(function(){
+
+	//2013.11.2 xDoc is not used at all in this file, but causes htmltree not to work in Chrome v30.x;
+	//var bItem0=false, xWin=window.parent._item_content, xDoc=xWin ? xWin.document : undefined;
+	var bItem0=false, xWin=window.parent._item_content;
+
+	var xTree=function(vItems, iRow, iLvl, jDiv){
+
+		var jUl=$('<ul>'); jDiv.append(jUl);
+	
+		if(iLvl>1) jUl.hide();
+
+		var jLi=undefined, j=iRow;
+		while(j < vItems.length){
+			var xItem=vItems[j];
+			var iLvl2=xItem.iLevel, nSub=xItem.nSub, sTitle=xItem.sTitle||'== Untitled ==', sLink=xItem.sHref;
+
+			if(iLvl2 < iLvl){
+				return j;
+			}else if(iLvl2 > iLvl){
+				j=xTree(vItems, j, iLvl+1, jLi);
+			}else{
+				jLi=$('<li>');
+
+				if(nSub>0){
+
+					var jBtn=$('<img>'); jLi.append(jBtn); jBtn.attr('src', iLvl==0 ? 'icon_minus.gif' : 'icon_plus.gif');
+
+					jBtn.click(function(){
+						var jBtn=$(this);
+						var jUl=jBtn.parent().children('ul');
+						var sImg=jBtn.attr('src');
+						if(sImg.match(/plus/i)){ // if(jUl.css('visibility')=='visible'){
+							jUl.show();
+							jBtn.attr('src', sImg.replace(/plus/i, 'minus'));
+						}else{
+							jUl.hide();
+							jBtn.attr('src', sImg.replace(/minus/i, 'plus'));
+						}
+					});
+				}
+
+				if(sLink){
+					var jA=$('<a>');
+					jA.attr('href', sLink);
+					jA.attr('target', '_item_content');
+					jA.addClass('CLS_Jump');
+					if(nSub>0) jA.addClass('CLS_Indent1'); else jA.addClass('CLS_Indent2');
+					jA.text(sTitle); jLi.append(jA);
+
+					/*jA.click(function(){
+						var jA=$(this), sHref=jA.attr('href'), sTitle=jA.text();
+						xWin.location=sHref;
+						return false;
+					});*/
+
+					if(!bItem0 && xWin){
+						xWin.location=sLink;
+						bItem0=true;
+					}
+				}else{
+					var jTxt=$('<span>'); jLi.append(jTxt); jTxt.text(sTitle);
+					jTxt.addClass('CLS_NoJump');
+					if(nSub>0) jTxt.addClass('CLS_Indent1'); else jTxt.addClass('CLS_Indent2');
+				}
+				jUl.append(jLi);
+				j++;
+			}
+		}
+	};
+
+	var jUl=$('#ID_DataInfoItems'), vItems=[];
+	jUl.children('li').each(function(i, xLi){
+		var jLi=$(xLi), xItem={};
+		xItem.iLevel=parseInt(jLi.attr('level')||'');
+		xItem.nSub=parseInt(jLi.attr('sub')||'0');
+		xItem.nID=parseInt(jLi.attr('id')||'-1');
+		xItem.sHref=jLi.attr('href')||'';
+		xItem.sAttach=jLi.attr('attach')||'';
+		xItem.sRelated=jLi.attr('related')||'';
+		xItem.sTitle=jLi.text()||'';
+		vItems[vItems.length]=xItem;
+	});
+
+	jUl.html(''); //clear the internal data when done;
+
+	if(vItems.length>0){
+		xTree(vItems, 0, 0, $('#ID_Tree'));
+		$('#ID_AppLoading').hide();
+		$('#ID_AppSafeFrame').show();
+	}
+
+});
+
+//]]>
+</script>
+
+</html>

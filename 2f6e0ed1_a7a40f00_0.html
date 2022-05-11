@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="2f6e0ed1_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 10pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div><span style="font-size: x-large;">【1】Golang语言面向对象编程说明：</span>
+			</div>
+			<div><span style="font-size: x-large;">（1）Golang也支持面向对象编程(OOP)，但是和传统的面向对象编程有区别，并不</span><span style="font-size: x-large; ">是纯粹的面向对象语言。所以我们说Golang支持面向对象编程特性是比较准确的。</span>
+			</div>
+			<div><span style="font-size: x-large;"></span>
+			</div>
+			<div><span style="font-size: x-large; ">（2）Golang没有类(class)，Go语言的结构体(struct)和其它编程语言的类(class)有同</span><span style="font-size: x-large; ">等的地位，你可以理解Gelang是基于struct来实现OOP特性的。</span>
+			</div>
+			<div><span style="font-size: x-large;"></span>
+			</div>
+			<div><span style="font-size: x-large; ">（3）Golang面向对象编程非常简洁，去掉了传统OOP语言的方法重载、构</span><span style="font-size: x-large; ">造函数和析构函数、隐藏的this指针等等</span>
+			</div>
+			<div><span style="font-size: x-large;"></span>
+			</div>
+			<div><span style="font-size: x-large; ">（4）Golang仍然有面向对象编程的继承，封装和多态的特性，只是实现的方式和</span><span style="font-size: x-large; ">其它OOP语言不一样，比如继承:Golang没有extends 关键字，继承是通过匿名字段来实现。&nbsp;</span>
+			</div>
+		</div>
+		<div><span style="font-size: x-large; "><br /></span>
+		</div>
+		<div><span style="font-size: x-large; ">【2】结构体的引入：</span>
+		</div>
+		<div><span style="font-size: x-large; "><br /></span>
+		</div>
+		<div><span style="font-size: x-large; ">具体的对象：</span>
+		</div>
+		<div><span style="font-size: x-large; ">一位老师：珊珊老师： 姓名：赵珊珊 &nbsp; 年龄：31岁 &nbsp; 性别 ：女 ......&nbsp;</span>
+		</div>
+		<div><span style="font-size: x-large; "><br /></span>
+		</div>
+		<div><span style="font-size: x-large; ">可以使用变量来处理：</span>
+		</div>
+		<div><span style="font-size: x-large; ">
+			<div><br />
+			</div>
+			<pre>
+<code id="ID_1795A29C30F" class="hljs go"><ol><li><span class="hljs-keyword">package</span> main</li><li><span class="hljs-keyword">import</span> <span class="hljs-string">"fmt"</span></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{</li><li>        <span class="hljs-comment">//珊珊老师： 姓名：赵珊珊   年龄：31岁   性别 ：女</span></li><li>        <span class="hljs-keyword">var</span> name <span class="hljs-keyword">string</span> = <span class="hljs-string">"赵珊珊"</span></li><li>        <span class="hljs-keyword">var</span> age <span class="hljs-keyword">int</span> = <span class="hljs-number">31</span></li><li>        <span class="hljs-keyword">var</span> sex <span class="hljs-keyword">string</span> = <span class="hljs-string">"女"</span></li><li></li><li>        <span class="hljs-comment">//马士兵老师：</span></li><li>        <span class="hljs-keyword">var</span> name2 <span class="hljs-keyword">string</span> = <span class="hljs-string">"马士兵"</span></li><li>        <span class="hljs-keyword">var</span> age2 <span class="hljs-keyword">int</span> = <span class="hljs-number">45</span></li><li>        <span class="hljs-keyword">var</span> sex2 <span class="hljs-keyword">string</span> = <span class="hljs-string">"男"</span></li><li>       </li><li>}</li></ol></code></pre>
+			<div>缺点：
+			</div>
+			<div>（1）不利于数据的管理、维护
+			</div></span>
+		</div>
+		<div><span style="font-size: x-large; ">（2）老师的很多属性属于一个对象，用变量管理太分散了</span>
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

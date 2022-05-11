@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="2a790e9e_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 10pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div><span style="font-size: x-large;"><br /></span>
+			</div>
+			<pre>
+<code id="ID_1794B046B6A" class="hljs go"><ol><li><span class="Apple-style-span" style="font-size: x-large;"><span class="hljs-keyword">package</span> main</span></li><li><span class="Apple-style-span" style="font-size: x-large;"><span class="hljs-keyword">import</span> <span class="hljs-string">"fmt"</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{</span></li><li><span class="Apple-style-span" style="font-size: x-large;">        <span class="hljs-comment">//方式1：</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        <span class="hljs-comment">//定义map变量：</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        <span class="hljs-keyword">var</span> a <span class="hljs-keyword">map</span>[<span class="hljs-keyword">int</span>]<span class="hljs-keyword">string</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        <span class="hljs-comment">//只声明map内存是没有分配空间</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        <span class="hljs-comment">//必须通过make函数进行初始化，才会分配空间：</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        a = <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">int</span>]<span class="hljs-keyword">string</span>,<span class="hljs-number">10</span>) <span class="hljs-comment">//map可以存放10个键值对</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        <span class="hljs-comment">//将键值对存入map中：</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        a[<span class="hljs-number">20095452</span>] = <span class="hljs-string">"张三"</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        a[<span class="hljs-number">20095387</span>] = <span class="hljs-string">"李四"</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        <span class="hljs-comment">//输出集合</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        fmt.Println(a)</span></li><li></li><li><span class="Apple-style-span" style="font-size: x-large;">        <span class="hljs-comment">//方式2：</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        b := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">int</span>]<span class="hljs-keyword">string</span>)</span></li><li><span class="Apple-style-span" style="font-size: x-large;">        b[<span class="hljs-number">20095452</span>] = <span class="hljs-string">"张三"</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        b[<span class="hljs-number">20095387</span>] = <span class="hljs-string">"李四"</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        fmt.Println(b)</span></li><li></li><li><span class="Apple-style-span" style="font-size: x-large;">        <span class="hljs-comment">//方式3：</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        c := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">int</span>]<span class="hljs-keyword">string</span>{</span></li><li><span class="Apple-style-span" style="font-size: x-large;">                <span class="hljs-number">20095452</span> : <span class="hljs-string">"张三"</span>,</span></li><li><span class="Apple-style-span" style="font-size: x-large;">                <span class="hljs-number">20098765</span> : <span class="hljs-string">"李四"</span>,</span></li><li><span class="Apple-style-span" style="font-size: x-large;">        }</span></li><li><span class="Apple-style-span" style="font-size: x-large;">        c[<span class="hljs-number">20095387</span>] = <span class="hljs-string">"王五"</span></span></li><li><span class="Apple-style-span" style="font-size: x-large;">        fmt.Println(c)</span></li><li><span class="Apple-style-span" style="font-size: x-large;">}</span></li></ol></code></pre>
+			<div><br />
+			</div>
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

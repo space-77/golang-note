@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="a2701123_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 18pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>【1】时间和日期的函数，需要到入time包，所以你获取当前时间，就要调用函数Now函数：
+		</div>
+		<div>
+			<div><br />
+			</div>
+			<pre>
+<code id="ID_177810E6ADF" class="hljs aspectj"><ol><li><span class="hljs-keyword">package</span> main</li><li><span class="hljs-keyword">import</span> (</li><li>        <span class="hljs-string">"fmt"</span></li><li>        <span class="hljs-string">"time"</span></li><li>)</li><li></li><li><span class="hljs-function">func <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{</li><li>        <span class="hljs-comment">//时间和日期的函数，需要到入time包，所以你获取当前时间，就要调用函数Now函数：</span></li><li>        now := time.Now()</li><li>        //<span class="Apple-style-span" style="background-color: rgb(255, 255, 0);">Now()返回值是一个结构体，类型是：time.Time</span></li><li>        fmt.Printf(<span class="hljs-string">"%v ~~~ 对应的类型为：%T\n"</span>,now,now)</li><li>        //2021-02-08 17:47:21.7600788 +0800 CST m=+0.005983901 ~~~ 对应的类型为：time.Time</li><li></li><li>        //<span class="Apple-style-span" style="background-color: rgb(255, 255, 0);">调用结构体中的方法：</span></li><li>        fmt.Printf(<span class="hljs-string">"年：%v \n"</span>,now.Year())</li><li>        fmt.Printf(<span class="hljs-string">"月：%v \n"</span>,now.Month())//月：February</li><li>        fmt.Printf(<span class="hljs-string">"月：%v \n"</span>,<span class="hljs-keyword">int</span>(now.Month()))//月：2</li><li>        fmt.Printf(<span class="hljs-string">"日：%v \n"</span>,now.Day())</li><li>        fmt.Printf(<span class="hljs-string">"时：%v \n"</span>,now.Hour())</li><li>        fmt.Printf(<span class="hljs-string">"分：%v \n"</span>,now.Minute())</li><li>        fmt.Printf(<span class="hljs-string">"秒：%v \n"</span>,now.Second())</li><li>}</li><li></li><li></li></ol></code></pre>
+			<div>【2】日期的格式化：
+			</div>
+		</div>
+		<div>（1）将日期以年月日时分秒按照格式输出为字符串：
+		</div>
+		<div>
+			<pre>
+<code id="ID_177811357CC" class="hljs perl"><ol><li>        //Printf将字符串直接输出：</li><li>        fmt.Printf(<span class="hljs-string">"当前年月日： %d-%d-%d 时分秒：%d:%d:%d  \n"</span>,now.Year(),now.Month(),</li><li>        now.Day(),now.Hour(),now.Minute(),now.Second())</li><li>        //Sprintf可以得到这个字符串，以便后续使用：</li><li>        datestr := fmt.Sprintf(<span class="hljs-string">"当前年月日： %d-%d-%d 时分秒：%d:%d:%d  \n"</span>,now.Year(),now.Month(),</li><li>        now.Day(),now.Hour(),now.Minute(),now.Second())</li><li>        fmt.Println(datestr)</li></ol></code></pre>
+			<div>（2）按照指定格式：
+			</div>
+		</div>
+		<div>
+			<div><br />
+			</div>
+			<pre>
+<code id="ID_177811843D1" class="hljs aspectj"><ol><li><span class="hljs-comment">        //这个参数字符串的各个数字必须是固定的，必须这样写</span></li><li>        datestr2 := now.Format(<span class="hljs-string">"2006/01/02 15/04/05"</span>)</li><li>        fmt.Println(datestr2)</li><li>        //选择任意的组合都是可以的，根据需求自己选择就可以（自己任意组合）。</li><li>        datestr3 := now.Format(<span class="hljs-string">"2006 15:04"</span>)</li><li>        fmt.Println(datestr3)</li></ol></code></pre>
+			<div><br />
+			</div>
+		</div>
+		<div><br />
+		</div>
+		<div><br />
+		</div>
+		<div><br />
+		</div>
+		<div><br />
+		</div>
+		<div><br />
+		</div>
+		<div><br />
+		</div>
+		<div><br />
+		</div>
+		<div><br />
+		</div>
+		<div><br />
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

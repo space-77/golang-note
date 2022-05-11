@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="a5dd113f_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 18pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>【1】介绍：
+			</div>
+			<div>
+				<div>字符串就是一串固定长度的字符连接起来的字符序列。
+				</div>
+				<div><br />
+				</div>
+				<div><br />
+				</div>
+				<div>【2】字符串的使用： &nbsp;
+				</div>
+				<div><br />
+				</div>
+				<div>
+					<div><br />
+					</div>
+					<pre>
+<code id="ID_176E0C0EE57" class="hljs cs"><ol><li>package main</li><li>import <span class="hljs-string">"fmt"</span></li><li></li><li><span class="hljs-function">func <span class="hljs-title">main</span>(<span class="hljs-params"></span>)</span>{</li><li>        <span class="hljs-comment">//1.定义一个字符串：</span></li><li>        <span class="hljs-keyword">var</span> s1 <span class="hljs-keyword">string</span> = <span class="hljs-string">"你好全面拥抱Golang"</span></li><li>        fmt.Println(s1)</li><li>        <span class="hljs-comment">//2.字符串是不可变的：指的是字符串一旦定义好，其中的字符的值不能改变</span></li><li>        <span class="hljs-keyword">var</span> s2 <span class="hljs-keyword">string</span> = <span class="hljs-string">"abc"</span></li><li>        <span class="hljs-comment">//s2 = "def"</span></li><li>        <span class="hljs-comment">//s2[0] = 't'</span></li><li>        fmt.Println(s2)</li><li></li><li>        <span class="hljs-comment">//3.字符串的表示形式：</span></li><li>        <span class="hljs-comment">//（1）如果字符串中没有特殊字符，字符串的表示形式用双引号</span></li><li>        <span class="hljs-comment">//var s3 string = "asdfasdfasdf"</span></li><li>        <span class="hljs-comment">//（2）如果字符串中有特殊字符，字符串的表示形式用反引号 ``</span></li><li>        <span class="hljs-keyword">var</span> s4 <span class="hljs-keyword">string</span> = `</li><li>        package main</li><li>        import <span class="hljs-string">"fmt"</span></li><li>        </li><li>        <span class="hljs-function">func <span class="hljs-title">main</span>(<span class="hljs-params"></span>)</span>{</li><li>                <span class="hljs-comment">//测试布尔类型的数值：</span></li><li>                <span class="hljs-keyword">var</span> flag01 <span class="hljs-keyword">bool</span> = <span class="hljs-literal">true</span></li><li>                fmt.Println(flag01)</li><li>        </li><li>                <span class="hljs-keyword">var</span> flag02 <span class="hljs-keyword">bool</span> = <span class="hljs-literal">false</span></li><li>                fmt.Println(flag02)</li><li>        </li><li>                <span class="hljs-keyword">var</span> flag03 <span class="hljs-keyword">bool</span> = <span class="hljs-number">5</span> &lt; <span class="hljs-number">9</span></li><li>                fmt.Println(flag03)</li><li>        }</li><li>        `</li><li>        fmt.Println(s4)</li><li></li><li>        <span class="hljs-comment">//4.字符串的拼接效果：</span></li><li>        <span class="hljs-keyword">var</span> s5 <span class="hljs-keyword">string</span> = <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span></li><li>        s5 += <span class="hljs-string">"hijk"</span></li><li>        fmt.Println(s5)</li><li></li><li>        <span class="hljs-comment">//当一个字符串过长的时候：注意：+保留在上一行的最后</span></li><li>        <span class="hljs-keyword">var</span> s6 <span class="hljs-keyword">string</span> = <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span> + <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span> + <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span> + <span class="hljs-string">"abc"</span> +</li><li>         <span class="hljs-string">"def"</span>+ <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span> + <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span>+ <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span> + <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span>+</li><li>          <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span> + <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span>+ <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span> + <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span>+ <span class="hljs-string">"abc"</span> +</li><li>           <span class="hljs-string">"def"</span> + <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span>+ <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span> + <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span>+ <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span> + </li><li>           <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span>+ <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span></li><li>        fmt.Println(s6)</li><li></li><li>}</li><li></li><li></li></ol></code></pre>
+					<div><br />
+					</div>
+				</div>
+			</div>
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

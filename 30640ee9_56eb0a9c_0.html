@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="30640ee9_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 18pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>【1】练习引入：
+		</div>
+		<div>
+			<div><br />
+			</div>
+			<pre>
+<code id="ID_178F39A583E" class="hljs go"><ol><li><span class="hljs-keyword">package</span> main</li><li><span class="hljs-keyword">import</span> <span class="hljs-string">"fmt"</span></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{</li><li>        <span class="hljs-comment">//实现的功能：给出五个学生的成绩，求出成绩的总和，平均数：</span></li><li>        <span class="hljs-comment">//给出五个学生的成绩：</span></li><li>        score1 := <span class="hljs-number">95</span></li><li>        score2 := <span class="hljs-number">91</span></li><li>        score3 := <span class="hljs-number">39</span></li><li>        score4 := <span class="hljs-number">60</span></li><li>        score5 := <span class="hljs-number">21</span></li><li>        <span class="hljs-comment">//求和：</span></li><li>        sum := score1 + score2 + score3 + score4 + score5 </li><li>        <span class="hljs-comment">//平均数：</span></li><li>        avg := sum / <span class="hljs-number">5</span></li><li>        <span class="hljs-comment">//输出</span></li><li>        fmt.Printf(<span class="hljs-string">"成绩的总和为：%v,成绩的平均数为：%v"</span>,sum,avg)</li><li>}</li><li></li></ol></code></pre>
+			<div>缺点：
+			</div>
+		</div>
+		<div>成绩变量定义个数太多，成绩管理费劲，维护费劲 &nbsp;---》 将成绩找个地方存起来 ---》 数组
+		</div>
+		<div>---》存储相同类型的数据
+		</div>
+		<div><br />
+		</div>
+		<div>【2】数组解决练习：
+		</div>
+		<div>
+			<div><br />
+			</div>
+			<pre>
+<code id="ID_178F3A0B41A" class="hljs go"><ol><li><span class="hljs-keyword">package</span> main</li><li><span class="hljs-keyword">import</span> <span class="hljs-string">"fmt"</span></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{</li><li>        <span class="hljs-comment">//实现的功能：给出五个学生的成绩，求出成绩的总和，平均数：</span></li><li>        <span class="hljs-comment">//给出五个学生的成绩：---&gt;数组存储：</span></li><li>        <span class="hljs-comment">//定义一个数组：</span></li><li>        <span class="hljs-keyword">var</span> scores [<span class="hljs-number">5</span>]<span class="hljs-keyword">int</span></li><li>        <span class="hljs-comment">//将成绩存入数组：</span></li><li>        scores[<span class="hljs-number">0</span>] = <span class="hljs-number">95</span></li><li>        scores[<span class="hljs-number">1</span>] = <span class="hljs-number">91</span></li><li>        scores[<span class="hljs-number">2</span>] = <span class="hljs-number">39</span></li><li>        scores[<span class="hljs-number">3</span>] = <span class="hljs-number">60</span></li><li>        scores[<span class="hljs-number">4</span>] = <span class="hljs-number">21</span></li><li>        <span class="hljs-comment">//求和：</span></li><li>        <span class="hljs-comment">//定义一个变量专门接收成绩的和：</span></li><li>        sum := <span class="hljs-number">0</span></li><li>        <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>;i &lt; <span class="hljs-built_in">len</span>(scores);i++ {<span class="hljs-comment">//i: 0,1,2,3,4 </span></li><li>                sum += scores[i]</li><li>        }</li><li>        <span class="hljs-comment">//平均数：</span></li><li>        avg := sum / <span class="hljs-built_in">len</span>(scores)</li><li>        <span class="hljs-comment">//输出</span></li><li>        fmt.Printf(<span class="hljs-string">"成绩的总和为：%v,成绩的平均数为：%v"</span>,sum,avg)</li><li>}</li></ol></code></pre>
+			<div><br />
+			</div>
+		</div>
+		<div>总结：
+		</div>
+		<div>数组定义格式：
+		</div>
+		<div>
+			<pre>
+<code id="ID_178F3A1580B" class="hljs stylus"><ol><li><span class="hljs-selector-tag">var</span> 数组名 [数组大小]数据类型</li></ol></code></pre>
+			<div>例如：
+			</div>
+		</div>
+		<div><span class="hljs-keyword">var</span> scores [<span class="hljs-number">5</span>]<span class="hljs-keyword">int</span>
+		</div>
+		<div><span style="font-weight: bold;">赋值：</span>
+		</div>
+		<div>
+			<li><span style="font-weight: bold;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;scores[<span class="hljs-number">0</span>] = <span class="hljs-number">95</span></span>
+			</li>
+			<li><span style="font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; scores[<span class="hljs-number">1</span>] = <span class="hljs-number">91</span></span>
+			</li>
+			<li><span style="font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; scores[<span class="hljs-number">2</span>] = <span class="hljs-number">39</span></span>
+			</li>
+			<li><span style="font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; scores[<span class="hljs-number">3</span>] = <span class="hljs-number">60</span></span>
+			</li>
+			<li><span style="font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; scores[<span class="hljs-number">4</span>] = <span class="hljs-number">21</span></span>
+			</li>
+		</div>
+		<div><br />
+		</div>
+		<div><br />
+		</div>
+		<div><br />
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="23510e95_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 10pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>
+				<div><span style="font-size: x-large;">【1】绑定指定类型：</span>
+				</div>
+				<div><span style="font-size: x-large;">方法：需要绑定指定数据类型</span>
+				</div>
+				<div><span style="font-size: x-large;">函数：不需要绑定数据类型</span>
+				</div>
+				<div><span style="font-size: x-large;"><br /></span>
+				</div>
+				<div><span style="font-size: x-large;">【2】调用方式不一样：</span>
+				</div>
+				<div><span style="font-size: x-large;">函数的调用方式:</span>
+				</div>
+				<div><span style="font-size: x-large;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;函数名(实参列表)</span>
+				</div>
+				<div><span style="font-size: x-large;">方法的调用方式：</span><span style="font-size: x-large; ">变量.方法名(实参列表)</span>
+				</div>
+				<div><span style="font-size: x-large; ">
+					<div><br />
+					</div>
+					<pre>
+<code id="ID_179AD4CE9D1" class="hljs go"><ol><li><span class="hljs-keyword">package</span> main</li><li><span class="hljs-keyword">import</span> <span class="hljs-string">"fmt"</span></li><li></li><li></li><li><span class="hljs-keyword">type</span> Student <span class="hljs-keyword">struct</span>{</li><li>        Name <span class="hljs-keyword">string</span></li><li>}</li><li></li><li><span class="hljs-comment">//定义方法：</span></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(s Student)</span> <span class="hljs-title">test01</span><span class="hljs-params">()</span></span>{</li><li>        fmt.Println(s.Name)</li><li>}</li><li></li><li><span class="hljs-comment">//定义函数：</span></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">method01</span><span class="hljs-params">(s Student)</span></span>{</li><li>        fmt.Println(s.Name)</li><li>}</li><li></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{</li><li>        <span class="hljs-comment">//调用函数：</span></li><li>        <span class="hljs-keyword">var</span> s Student = Student{<span class="hljs-string">"丽丽"</span>}</li><li>        method01(s)</li><li></li><li>        <span class="hljs-comment">//方法调用：</span></li><li>        s.test01()</li><li>}</li><li></li></ol></code></pre>
+					<div><br />
+					</div></span>
+				</div>
+				<div><span style="font-size: x-large; "><br /></span>
+				</div>
+				<div><span style="font-size: x-large; "><br /></span>
+				</div>
+				<div><span style="font-size: x-large; ">【3】对于函数来说，参数类型对应是什么就要传入什么。</span>
+				</div>
+				<div><span style="font-size: x-large; "><br /></span>
+				</div>
+				<div><span style="font-size: x-large; ">
+					<div><br />
+					</div>
+					<pre>
+<code id="ID_179AD51F470" class="hljs go"><ol><li><span class="hljs-keyword">package</span> main</li><li><span class="hljs-keyword">import</span> <span class="hljs-string">"fmt"</span></li><li></li><li></li><li><span class="hljs-keyword">type</span> Student <span class="hljs-keyword">struct</span>{</li><li>        Name <span class="hljs-keyword">string</span></li><li>}</li><li></li><li></li><li><span class="hljs-comment">//定义函数：</span></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">method01</span><span class="hljs-params">(s Student)</span></span>{</li><li>        fmt.Println(s.Name)</li><li>}</li><li></li><li></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">method02</span><span class="hljs-params">(s *Student)</span></span>{</li><li>        fmt.Println((*s).Name)</li><li>}</li><li></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{</li><li>        <span class="hljs-keyword">var</span> s Student = Student{<span class="hljs-string">"丽丽"</span>}</li><li>        method01(s)</li><li>        <span class="hljs-comment">//method01(&amp;s)错误</span></li><li>        method02(&amp;s)</li><li>        <span class="hljs-comment">//method02(s)错误</span></li><li>}</li><li></li></ol></code></pre>
+					<div><br />
+					</div></span>
+				</div>
+				<div><span style="font-size: x-large; "><br /></span>
+				</div>
+				<div><span style="font-size: x-large; "><br /></span>
+				</div>
+				<div><span style="font-size: x-large; "><br /></span>
+				</div>
+				<div><span style="font-size: x-large; ">【4】对于方法来说，接收者为值类型，可以传入指针类型，接受者为指针类型，可以传入值类型。</span>
+				</div>
+				<div><span style="font-size: x-large;">
+					<div><br />
+					</div>
+					<pre>
+<code id="ID_179AD54A2D5" class="hljs go"><ol><li><span class="hljs-keyword">package</span> main</li><li><span class="hljs-keyword">import</span> <span class="hljs-string">"fmt"</span></li><li></li><li></li><li><span class="hljs-keyword">type</span> Student <span class="hljs-keyword">struct</span>{</li><li>        Name <span class="hljs-keyword">string</span></li><li>}</li><li></li><li><span class="hljs-comment">//定义方法：</span></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(s Student)</span> <span class="hljs-title">test01</span><span class="hljs-params">()</span></span>{</li><li>        fmt.Println(s.Name)</li><li>}</li><li></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(s *Student)</span> <span class="hljs-title">test02</span><span class="hljs-params">()</span></span>{</li><li>        fmt.Println((*s).Name)</li><li>}</li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{</li><li>        <span class="hljs-keyword">var</span> s Student = Student{<span class="hljs-string">"丽丽"</span>}</li><li>        s.test01()</li><li>        (&amp;s).test01()<span class="hljs-comment">//虽然用指针类型调用，但是传递还是按照值传递的形式</span></li><li></li><li>        (&amp;s).test02()</li><li>        s.test02()<span class="hljs-comment">//等价</span></li><li>}</li><li></li></ol></code></pre>
+					<div><br />
+					</div></span>
+				</div>
+				<div><br />
+				</div>
+			</div>
+		</div>
+		<div><span style="font-size: x-large;"><br /></span>
+		</div>
+		<div><span style="font-size: x-large;"><br /></span>
+		</div>
+		<div><span style="font-size: x-large;"><br /></span>
+		</div>
+		<div><span style="font-size: x-large;"><br /></span>
+		</div>
+		<div><span style="font-size: x-large;"><br /></span>
+		</div>
+		<div><br />
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

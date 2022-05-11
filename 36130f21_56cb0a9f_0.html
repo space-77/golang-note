@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="36130f21_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 18pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>【1】为什么要使用函数：
+			</div>
+			<div>提高代码的复用型，减少代码的冗余，代码的维护性也提高了
+			</div>
+			<div><br />
+			</div>
+			<div>【2】函数的定义：
+			</div>
+			<div>
+				<div>为完成某一功能的程序指令(语句)的集合,称为函数。
+				</div>
+				<div><br />
+				</div>
+				<div>【3】基本语法
+				</div>
+				<div>func &nbsp; 函数名（形参列表)（返回值类型列表）{
+				</div>
+				<div>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;执行语句..
+				</div>
+				<div>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;return + 返回值列表
+				</div>
+				<div>}
+				</div>
+				<div><br />
+				</div>
+				<div>【4】函数的定义和函数的调用案例：
+				</div>
+				<div><br />
+				</div>
+				<div>
+					<div><br />
+					</div>
+					<pre>
+<code id="ID_17719C972E6" class="hljs go"><ol><li><span class="hljs-keyword">package</span> main</li><li><span class="hljs-keyword">import</span> <span class="hljs-string">"fmt"</span></li><li></li><li><span class="hljs-comment">// func   函数名（形参列表)（返回值类型列表）{</span></li><li><span class="hljs-comment">// 	执行语句..</span></li><li><span class="hljs-comment">// 	return + 返回值列表</span></li><li><span class="hljs-comment">// }</span></li><li></li><li><span class="hljs-comment">//自定义函数：功能：两个数相加：</span></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">cal</span> <span class="hljs-params">(num1 <span class="hljs-keyword">int</span>,num2 <span class="hljs-keyword">int</span>)</span> <span class="hljs-params">(<span class="hljs-keyword">int</span>)</span></span> { <span class="hljs-comment">//如果返回值类型就一个的话，那么()是可以省略不写的</span></li><li>        <span class="hljs-keyword">var</span> sum <span class="hljs-keyword">int</span> = <span class="hljs-number">0</span></li><li>        sum += num1</li><li>        sum += num2</li><li>        <span class="hljs-keyword">return</span> sum</li><li>}</li><li></li><li></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{</li><li>        <span class="hljs-comment">//功能：10 + 20</span></li><li>        <span class="hljs-comment">//调用函数：</span></li><li>        sum := cal(<span class="hljs-number">10</span>,<span class="hljs-number">20</span>)</li><li>        fmt.Println(sum)</li><li>        <span class="hljs-comment">// var num1 int = 10</span></li><li>        <span class="hljs-comment">// var num2 int = 20</span></li><li>        <span class="hljs-comment">//求和：</span></li><li>        <span class="hljs-comment">// var sum int = 0</span></li><li>        <span class="hljs-comment">// sum += num1</span></li><li>        <span class="hljs-comment">// sum += num2</span></li><li>        <span class="hljs-comment">// fmt.Println(sum)</span></li><li></li><li>        <span class="hljs-comment">//功能：30 + 50</span></li><li>        <span class="hljs-keyword">var</span> num3 <span class="hljs-keyword">int</span> = <span class="hljs-number">30</span></li><li>        <span class="hljs-keyword">var</span> num4 <span class="hljs-keyword">int</span> = <span class="hljs-number">50</span></li><li>        <span class="hljs-comment">//调用函数：</span></li><li>        sum1 := cal(num3,num4)</li><li>        fmt.Println(sum1)</li><li>        <span class="hljs-comment">//求和：</span></li><li>        <span class="hljs-comment">// var sum1 int = 0</span></li><li>        <span class="hljs-comment">// sum1 += num3</span></li><li>        <span class="hljs-comment">// sum1 += num4</span></li><li>        <span class="hljs-comment">// fmt.Println(sum1)</span></li><li>}</li></ol></code></pre>
+					<div><br />
+					</div>
+				</div>
+				<div>
+				</div>
+			</div>
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

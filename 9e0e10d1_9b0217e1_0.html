@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="9e0e10d1_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 18pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>【1】Go在不同类型的变量之间赋值时<span style="color: rgb(255, 102, 0);">需要显式转换</span>，并且只有显式转换(强制转换)。
+			</div>
+			<div>【2】语法：
+			</div>
+			<div>表达式<span style="color: rgb(255, 102, 0);">T(v)</span>将值v转换为类型T
+			</div>
+			<div>
+				<div>T : 就是数据类型
+				</div>
+				<div>v : 就是需要转换的变量
+				</div>
+				<div><br />
+				</div>
+			</div>
+			<div>【3】案例展示：&nbsp;
+			</div>
+			<div><br />
+			</div>
+			<div>
+				<div><br />
+				</div>
+				<pre>
+<code id="ID_176E10B749F" class="hljs go"><ol><li><span class="hljs-keyword">package</span> main</li><li><span class="hljs-keyword">import</span> <span class="hljs-string">"fmt"</span></li><li></li><li><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{</li><li>        <span class="hljs-comment">//进行类型转换：</span></li><li>        <span class="hljs-keyword">var</span> n1 <span class="hljs-keyword">int</span> = <span class="hljs-number">100</span></li><li>        <span class="hljs-comment">//var n2 float32 = n1  在这里自动转换不好使，比如显式转换</span></li><li>        fmt.Println(n1)</li><li>        <span class="hljs-comment">//fmt.Println(n2)</span></li><li>        <span class="hljs-keyword">var</span> n2 <span class="hljs-keyword">float32</span> = <span class="hljs-keyword">float32</span>(n1)</li><li>        fmt.Println(n2)</li><li>        <span class="hljs-comment">//注意：n1的类型其实还是int类型，只是将n1的值100转为了float32而已，n1还是int的类型</span></li><li>        fmt.Printf(<span class="hljs-string">"%T"</span>,n1)  <span class="hljs-comment">//int</span></li><li>        fmt.Println()</li><li></li><li>        <span class="hljs-comment">//将int64转为int8的时候，编译不会出错的，但是会数据的溢出</span></li><li>        <span class="hljs-keyword">var</span> n3 <span class="hljs-keyword">int64</span> = <span class="hljs-number">888888</span></li><li>        <span class="hljs-keyword">var</span> n4 <span class="hljs-keyword">int8</span> = <span class="hljs-keyword">int8</span>(n3)</li><li>        fmt.Println(n4)<span class="hljs-comment">//56</span></li><li></li><li>        <span class="hljs-keyword">var</span> n5 <span class="hljs-keyword">int32</span> = <span class="hljs-number">12</span></li><li>        <span class="hljs-keyword">var</span> n6 <span class="hljs-keyword">int64</span> = <span class="hljs-keyword">int64</span>(n5) + <span class="hljs-number">30</span>  <span class="hljs-comment">//一定要匹配=左右的数据类型</span></li><li>        fmt.Println(n5)</li><li>        fmt.Println(n6)</li><li></li><li></li><li>        <span class="hljs-keyword">var</span> n7 <span class="hljs-keyword">int64</span> = <span class="hljs-number">12</span></li><li>        <span class="hljs-keyword">var</span> n8 <span class="hljs-keyword">int8</span> = <span class="hljs-keyword">int8</span>(n7) + <span class="hljs-number">127</span>  <span class="hljs-comment">//编译通过，但是结果可能会溢出</span></li><li>        <span class="hljs-comment">//var n9 int8 = int8(n7) + 128 //编译不会通过</span></li><li>        fmt.Println(n8)</li><li>        <span class="hljs-comment">//fmt.Println(n9)</span></li><li></li><li></li><li>}</li><li></li><li></li></ol></code></pre>
+				<div><br />
+				</div>
+			</div>
+			<div><br />
+			</div>
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

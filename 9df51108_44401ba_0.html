@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="9df51108_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 18pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>【1】Golang的 goto 语句可以无条件地转移到程序中指定的行。
+			</div>
+			<div>【2】goto语句通常与条件语句配合使用。可用来实现条件转移.
+			</div>
+			<div>【3】在Go程序设计中一般不建议使用goto语句，以免造成程序流程的混乱。
+			</div>
+			<div>【4】代码展示：
+			</div>
+			<div>
+				<div><br />
+				</div>
+				<pre>
+<code id="ID_1771951FE8A" class="hljs gradle"><ol><li><span class="hljs-keyword">package</span> main</li><li><span class="hljs-keyword">import</span> <span class="hljs-string">"fmt"</span></li><li>func main(){</li><li>        fmt.<span class="hljs-keyword">Println</span>(<span class="hljs-string">"hello golang1"</span>)</li><li>        fmt.<span class="hljs-keyword">Println</span>(<span class="hljs-string">"hello golang2"</span>)</li><li>        <span class="hljs-keyword">if</span> <span class="hljs-number">1</span> == <span class="hljs-number">1</span> {</li><li>                goto label1 <span class="hljs-comment">//goto一般配合条件结构一起使用</span></li><li>        }</li><li>        fmt.<span class="hljs-keyword">Println</span>(<span class="hljs-string">"hello golang3"</span>)</li><li>        fmt.<span class="hljs-keyword">Println</span>(<span class="hljs-string">"hello golang4"</span>)</li><li>        fmt.<span class="hljs-keyword">Println</span>(<span class="hljs-string">"hello golang5"</span>)</li><li>        fmt.<span class="hljs-keyword">Println</span>(<span class="hljs-string">"hello golang6"</span>)</li><li>        label1:</li><li>        fmt.<span class="hljs-keyword">Println</span>(<span class="hljs-string">"hello golang7"</span>)</li><li>        fmt.<span class="hljs-keyword">Println</span>(<span class="hljs-string">"hello golang8"</span>)</li><li>        fmt.<span class="hljs-keyword">Println</span>(<span class="hljs-string">"hello golang9"</span>)</li><li>}</li></ol></code></pre>
+				<div><br />
+				</div>
+			</div>
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

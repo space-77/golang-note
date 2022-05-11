@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="2eb20ecf_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 18pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>【1】<span style="font-size: 18pt">算术运算符：+ ，-，*，/，%，++，--</span>
+		</div>
+		<div>【2】介绍：算术运算符是对数值类型的变量进行运算的，比如，加减乘除。
+		</div>
+		<div>【3】代码展示：
+		</div>
+		<div><br />
+		</div>
+		<div>
+			<pre>
+<code id="ID_1770014E1B8" class="hljs lsl"><ol><li>package main</li><li>import <span class="hljs-string">"fmt"</span></li><li>func main(){</li><li>        <span class="hljs-comment" style="background-color: rgb(255, 255, 0);">//+加号：</span></li><li>        <span class="hljs-comment">//1.正数 2.相加操作  3.字符串拼接</span></li><li>        var n1 int = +<span class="hljs-number">10</span></li><li>        fmt.Println(n1)</li><li>        var n2 int = <span class="hljs-number">4</span> + <span class="hljs-number">7</span></li><li>        fmt.Println(n2)</li><li>        var s1 <span class="hljs-type">string</span> = <span class="hljs-string">"abc"</span> + <span class="hljs-string">"def"</span></li><li>        fmt.Println(s1)</li><li></li><li>        <span class="hljs-comment" style="background-color: rgb(255, 255, 0);">// /除号：</span></li><li>        fmt.Println(<span class="hljs-number">10</span>/<span class="hljs-number">3</span>) <span class="hljs-comment">//两个int类型数据运算，结果一定为整数类型</span></li><li>        fmt.Println(<span class="hljs-number">10.0</span>/<span class="hljs-number">3</span>)<span class="hljs-comment">//浮点类型参与运算，结果为浮点类型</span></li><li></li><li>        <span class="hljs-comment" style="background-color: rgb(255, 255, 0);">// % 取模  等价公式： a%b=a-a/b*b</span></li><li>        fmt.Println(<span class="hljs-number">10</span>%<span class="hljs-number">3</span>) <span class="hljs-comment">// 10%3= 10-10/3*3 = 1</span></li><li>        fmt.Println(<span class="hljs-number">-10</span>%<span class="hljs-number">3</span>)</li><li>        fmt.Println(<span class="hljs-number">10</span>%<span class="hljs-number">-3</span>)</li><li>        fmt.Println(<span class="hljs-number">-10</span>%<span class="hljs-number">-3</span>)</li><li></li><li>        <span class="hljs-comment" style="background-color: rgb(255, 255, 0);">//++自增操作：</span></li><li>        var a int = <span class="hljs-number">10</span></li><li>        a++</li><li>        fmt.Println(a)</li><li>        a--</li><li>        fmt.Println(a)</li><li>        <span class="hljs-comment">//++ 自增 加1操作，--自减，减1操作</span></li><li>        <span class="hljs-comment">//go语言里，++，--操作非常简单，只能单独使用，不能参与到运算中去</span></li><li>        <span class="hljs-comment">//go语言里，++，--只能在变量的后面，不能写在变量的前面 --a  ++a  错误写法</span></li><li>}</li></ol></code></pre>
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

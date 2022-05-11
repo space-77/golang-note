@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="a5541153_b7941b29_0.css" />
+		<style>
+			body, table{font-family: 微软雅黑; font-size: 18pt}
+			
+			table{border-collapse: collapse; border: 1px solid gray; border-width: 2px 1px 2px 1px;}
+			th{border: 1px solid gray; padding: 4px; background-color: #ddd;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+			pre{border: 2px solid #d6d6d6; padding: 0px; border-radius: 3px;}
+		</style>
+	</head>
+	<body>
+		<div>【1】基本语法
+		</div>
+		<div>if 条件表达式1 {
+		</div>
+		<div>&nbsp; &nbsp; 逻辑代码1
+		</div>
+		<div>} else if 条件表达式2 {
+		</div>
+		<div>&nbsp; &nbsp; 逻辑代码2
+		</div>
+		<div>}
+		</div>
+		<div>.......
+		</div>
+		<div>else {
+		</div>
+		<div>&emsp;&emsp;&emsp;&emsp;逻辑代码n
+		</div>
+		<div>}
+		</div>
+		<div><br />
+		</div>
+		<div>【2】代码练习：
+		</div>
+		<div>
+			<div><br />
+			</div>
+			<pre>
+<code id="ID_1770F58F934" class="hljs awk"><ol><li>package main</li><li>import <span class="hljs-string">"fmt"</span></li><li><span class="hljs-keyword">func</span> main(){</li><li>        <span class="hljs-regexp">//</span>实现功能：根据给出的学生分数，判断学生的等级：</li><li>        <span class="hljs-regexp">//</span> &gt;=<span class="hljs-number">90</span>  -----A</li><li>        <span class="hljs-regexp">//</span> &gt;=<span class="hljs-number">80</span>  -----B</li><li>        <span class="hljs-regexp">//</span> &gt;=<span class="hljs-number">70</span>  -----C</li><li>        <span class="hljs-regexp">//</span> &gt;=<span class="hljs-number">60</span>  -----D</li><li>        <span class="hljs-regexp">//</span> &lt;<span class="hljs-number">60</span>   -----E</li><li></li><li>        <span class="hljs-regexp">//</span>方式<span class="hljs-number">1</span>：利用<span class="hljs-keyword">if</span>单分支实现：</li><li>        <span class="hljs-regexp">//</span>定义一个学生的成绩：</li><li>        var score int = <span class="hljs-number">18</span></li><li>        <span class="hljs-regexp">//</span>对学生的成绩进行判定：</li><li>        <span class="hljs-regexp">//</span> <span class="hljs-keyword">if</span> score &gt;= <span class="hljs-number">90</span> {</li><li>        <span class="hljs-regexp">//</span> 	fmt.Println(<span class="hljs-string">"您的成绩为A级别"</span>)</li><li>        <span class="hljs-regexp">//</span> }</li><li>        <span class="hljs-regexp">//</span> <span class="hljs-keyword">if</span> score &gt;= <span class="hljs-number">80</span> &amp;&amp; score &lt; <span class="hljs-number">90</span> {</li><li>        <span class="hljs-regexp">//</span> 	fmt.Println(<span class="hljs-string">"您的成绩为B级别"</span>)</li><li>        <span class="hljs-regexp">//</span> }</li><li>        <span class="hljs-regexp">//</span> <span class="hljs-keyword">if</span> score &gt;= <span class="hljs-number">70</span> &amp;&amp; score &lt; <span class="hljs-number">80</span> {</li><li>        <span class="hljs-regexp">//</span> 	fmt.Println(<span class="hljs-string">"您的成绩为C级别"</span>)</li><li>        <span class="hljs-regexp">//</span> }</li><li>        <span class="hljs-regexp">//</span> <span class="hljs-keyword">if</span> score &gt;= <span class="hljs-number">60</span> &amp;&amp; score &lt; <span class="hljs-number">70</span> {</li><li>        <span class="hljs-regexp">//</span> 	fmt.Println(<span class="hljs-string">"您的成绩为D级别"</span>)</li><li>        <span class="hljs-regexp">//</span> }</li><li>        <span class="hljs-regexp">//</span> <span class="hljs-keyword">if</span> score &lt; <span class="hljs-number">60</span> {</li><li>        <span class="hljs-regexp">//</span> 	fmt.Println(<span class="hljs-string">"您的成绩为E级别"</span>)</li><li>        <span class="hljs-regexp">//</span> }</li><li></li><li>        <span class="hljs-regexp">//</span>上面方式<span class="hljs-number">1</span>利用多个单分支拼凑出多个选择，多个选择是并列的，依次从上而下顺序执行，即使走了第一个分支，那么其它分支也是需要判断</li><li>        </li><li>        <span class="hljs-regexp">//</span>方式<span class="hljs-number">2</span>：多分支：优点：如果已经走了一个分支了，那么下面的分支就不会再去判断执行了</li><li>        <span class="hljs-regexp">//</span> <span class="hljs-keyword">if</span> score &gt;= <span class="hljs-number">90</span> {</li><li>        <span class="hljs-regexp">//</span> 	fmt.Println(<span class="hljs-string">"您的成绩为A级别"</span>)</li><li>        <span class="hljs-regexp">//</span> } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> score &gt;= <span class="hljs-number">80</span> {<span class="hljs-regexp">//</span><span class="hljs-keyword">else</span>隐藏：score &lt; <span class="hljs-number">90</span></li><li>        <span class="hljs-regexp">//</span> 	fmt.Println(<span class="hljs-string">"您的成绩为B级别"</span>)</li><li>        <span class="hljs-regexp">//</span> } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> score &gt;= <span class="hljs-number">70</span> {<span class="hljs-regexp">//</span>score &lt; <span class="hljs-number">80</span></li><li>        <span class="hljs-regexp">//</span> 	fmt.Println(<span class="hljs-string">"您的成绩为C级别"</span>)</li><li>        <span class="hljs-regexp">//</span> } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> score &gt;= <span class="hljs-number">60</span> {<span class="hljs-regexp">//</span>score &lt; <span class="hljs-number">70</span></li><li>        <span class="hljs-regexp">//</span> 	fmt.Println(<span class="hljs-string">"您的成绩为D级别"</span>)</li><li>        <span class="hljs-regexp">//</span> } <span class="hljs-keyword">else</span> {<span class="hljs-regexp">//</span>score &lt; <span class="hljs-number">60</span></li><li>        <span class="hljs-regexp">//</span> 	fmt.Println(<span class="hljs-string">"您的成绩为E级别"</span>)</li><li>        <span class="hljs-regexp">//</span> } <span class="hljs-regexp">//</span>建议你保证<span class="hljs-keyword">else</span>的存在，只有有了<span class="hljs-keyword">else</span>才会真正 起到多选一 的效果</li><li></li><li>        <span class="hljs-keyword">if</span> score &gt; <span class="hljs-number">10</span> {</li><li>                fmt.Println(<span class="hljs-string">"aaa"</span>)</li><li>        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> score &gt; <span class="hljs-number">6</span>{</li><li>                fmt.Println(<span class="hljs-string">"bbb"</span>)</li><li>        }</li><li>}</li></ol></code></pre>
+			<div><br />
+			</div>
+		</div>
+		<div><br />
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>
